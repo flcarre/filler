@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 01:17:29 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 01:24:55 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 04:36:22 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ void	ft_init(t_data *data)
 	data->p.p = (void *)0;
 	data->p.x = 0;
 	data->p.y = 0;
+	data->i.p = (void *)0;
+	data->i.x = 0;
+	data->i.y = 0;
 	data->me = 0;
 	data->ad = 0;
 	data->px = 0;

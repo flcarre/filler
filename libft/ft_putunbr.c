@@ -1,32 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_whoami.c                                        :+:      :+:    :+:   */
+/*   ft_putunbr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/20 03:47:28 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 03:47:30 by lutsiara         ###   ########.fr       */
+/*   Created: 2018/11/13 12:26:24 by lutsiara          #+#    #+#             */
+/*   Updated: 2019/03/20 05:21:41 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "filler.h"
+#include "libft.h"
 
-void	ft_whoami(t_data *data)
+void	ft_putunbr(unsigned long long n)
 {
-	char	*s;
-
-	s = (void *)0;
-	get_next_line(0, &s);
-	if (s[10] == '1')
+	if (n >= 10)
 	{
-		data->me = 'O';
-		data->ad = 'X';
+		ft_putunbr(n / 10);
+		ft_putunbr(n % 10);
 	}
-	else if (s[10] == '2')
-	{
-		data->me = 'X';
-		data->ad = 'O';
-	}
-	ft_memdel((void **)&s);
+	else
+		ft_putchar('0' + n);
 }

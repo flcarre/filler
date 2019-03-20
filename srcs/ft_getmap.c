@@ -1,6 +1,18 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   ft_getmap.c                                        :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2019/03/20 03:46:22 by lutsiara          #+#    #+#             */
+/*   Updated: 2019/03/20 04:13:45 by lutsiara         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "filler.h"
 
-static int	check_map(t_tab *m, unsigned int j)
+static int	ft_check_map(t_tab *m, unsigned int j)
 {
 	unsigned long	i;
 
@@ -22,12 +34,13 @@ int			ft_getmap(t_tab *m)
 	char			*s;
 	unsigned int	i;
 
-	s = (void *)0;
 	i = 0;
+	s = (void *)0;
 	get_next_line(0, &s);
 	m->y = ft_atoui(ft_strchr(s, ' '));
 	m->x = ft_atoui(ft_strchr(ft_strchr(s, ' ') + 1, ' '));
-	m->p = ft_strtabnew(m->y, m->x);
+	if (!(m->p = ft_strtabnew(m->y, m->x)))
+		return (1);
 	ft_memdel((void **)&s);
 	get_next_line(0, &s);
 	while (m->p[i])
@@ -35,12 +48,11 @@ int			ft_getmap(t_tab *m)
 		ft_memdel((void **)&s);
 		get_next_line(0, &s);
 		ft_strcpy(m->p[i], ft_strchr(s, ' ') + 1);
-		if (check_map(m, i))
+		if (ft_check_map(m, i++))
 		{
 			ft_memdel((void **)&s);
 			return (1);
 		}
-		i++;
 	}
 	ft_memdel((void **)&s);
 	return (0);

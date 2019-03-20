@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:06:41 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/20 02:27:38 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/20 05:22:16 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -58,6 +58,7 @@ SRCS = $(SRCDIR)ft_atoi.c \
 	   $(SRCDIR)ft_putendl.c \
 	   $(SRCDIR)ft_putendl_fd.c \
 	   $(SRCDIR)ft_putnbr.c \
+	   $(SRCDIR)ft_putunbr.c \
 	   $(SRCDIR)ft_putnbr_fd.c \
 	   $(SRCDIR)ft_putstr.c \
 	   $(SRCDIR)ft_putstr_fd.c \
