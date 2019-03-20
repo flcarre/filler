@@ -1,11 +1,11 @@
 #include "filler.h"
 
-static int check_map(t_tab *m, unsigned int j)
+static int	check_map(t_tab *m, unsigned int j)
 {
 	unsigned long	i;
 
 	i = 0;
-	while(m->p[j][i])
+	while (m->p[j][i])
 	{
 		if (m->p[j][i] != '.' && m->p[j][i] != 'O' && m->p[j][i] != 'X')
 		{
@@ -17,10 +17,10 @@ static int check_map(t_tab *m, unsigned int j)
 	return (0);
 }
 
-int	ft_getmap(t_tab *m)
+int			ft_getmap(t_tab *m)
 {
-	char				*s;
-	unsigned int		i;
+	char			*s;
+	unsigned int	i;
 
 	s = (void *)0;
 	i = 0;
@@ -30,7 +30,7 @@ int	ft_getmap(t_tab *m)
 	m->p = ft_strtabnew(m->y, m->x);
 	ft_memdel((void **)&s);
 	get_next_line(0, &s);
-	while(m->p[i])
+	while (m->p[i])
 	{
 		ft_memdel((void **)&s);
 		get_next_line(0, &s);

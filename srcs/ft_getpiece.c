@@ -11,7 +11,7 @@ int	ft_getpiece(t_tab *p)
 	p->y = ft_atoui(ft_strchr(s, ' '));
 	p->x = ft_atoui(ft_strchr(ft_strchr(s, ' ') + 1, ' '));
 	p->p = ft_strtabnew(p->y, p->x);
-	while(p->p[i])
+	while (p->p[i])
 	{
 		ft_memdel((void **)&s);
 		get_next_line(0, &s);

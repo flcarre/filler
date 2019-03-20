@@ -10,7 +10,7 @@ void	ft_updatemap(t_tab *m)
 	get_next_line(0, &s);
 	ft_memdel((void **)&s);
 	get_next_line(0, &s);
-	while(m->p[i])
+	while (m->p[i])
 	{
 		ft_memdel((void **)&s);
 		get_next_line(0, &s);
