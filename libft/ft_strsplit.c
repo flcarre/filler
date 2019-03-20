@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:08:50 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/13 16:23:04 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 02:05:27 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ char	**ft_strsplit(char const *s, char c)
 
 	if (!s)
 		return ((void *)0);
-	if (!(tmp = ft_strtabnew(ft_countword(s, c))))
+	if (!(tmp = ft_strtabnew(ft_countword(s, c), 0)))
 		return ((void *)0);
 	w = 0;
 	while (*s)
