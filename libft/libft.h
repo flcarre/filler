@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:44:47 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 02:02:50 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 02:29:03 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -50,6 +50,7 @@ char				*ft_strnstr(const char *haystack, const char *needle, \
 int					ft_strcmp(const char *s1, const char *s2);
 int					ft_strncmp(const char *s1, const char *s2, unsigned long n);
 int					ft_atoi(const char *str);
+unsigned int		ft_atoui(const char *str);
 int					ft_isspace(int c);
 int					ft_isdigit(int c);
 int					ft_isalpha(int c);

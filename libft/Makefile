@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:06:41 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/11 17:29:07 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/20 02:27:38 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,6 +21,7 @@ SRCDIR = ./
 INCDIR = ./
 
 SRCS = $(SRCDIR)ft_atoi.c \
+	   $(SRCDIR)ft_atoui.c \
 	   $(SRCDIR)ft_bzero.c \
 	   $(SRCDIR)ft_countword.c \
 	   $(SRCDIR)ft_delcontent.c \
