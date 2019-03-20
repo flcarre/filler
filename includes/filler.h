@@ -6,7 +6,7 @@
 /*   By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 17:57:49 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 01:53:48 by flxw             ###   ########.fr       */
+/*   Updated: 2019/03/20 02:08:33 by flxw             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,5 +37,7 @@ typedef struct			s_data
 
 void					ft_init(t_data *data);
 void					ft_whoami(t_data *data);
+int						ft_getmap(t_tap *m);
+void					ft_printab_fd(char **p, int fd);
 
 #endif

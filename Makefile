@@ -6,7 +6,7 @@
 #    By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/11 17:54:03 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/20 01:53:31 by flxw             ###   ########.fr        #
+#    Updated: 2019/03/20 02:08:00 by flxw             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,8 +24,9 @@ LIB = ./libft
 
 SRCS = $(SRCDIR)main.c \
 	   $(SRCDIR)ft_init.c \
-	   $(SRCDIR)ft_whoami.c
-	  # $(SRCDIR)ft_getmap.c \
+	   $(SRCDIR)ft_whoami.c \
+	   $(SRCDIR)ft_getmap.c \
+	   $(SRCDIR)ft_printab_fd.c 
 	   #$(SRCDIR)ft_getpiece.c \
 	   #$(SRCDIR)ft_fight.c \
 	   #$(SRCDIR)ft_free.c \

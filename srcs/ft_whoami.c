@@ -2,7 +2,7 @@
 
 void	ft_whoami(t_data *data)
 {
-	char *s;
+	char	*s;
 
 	s = (void *)0;
 	get_next_line(0, &s);
