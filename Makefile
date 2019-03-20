@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
+#    By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/11 17:54:03 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/13 20:28:12 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/20 01:53:31 by flxw             ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,12 +24,12 @@ LIB = ./libft
 
 SRCS = $(SRCDIR)main.c \
 	   $(SRCDIR)ft_init.c \
-	   $(SRCDIR)ft_whoami.c \
-	   $(SRCDIR)ft_getmap.c \
-	   $(SRCDIR)ft_getpiece.c \
-	   $(SRCDIR)ft_fight.c \
-	   $(SRCDIR)ft_free.c \
-	   $(SRCDIR)ft_updatemap.c
+	   $(SRCDIR)ft_whoami.c
+	  # $(SRCDIR)ft_getmap.c \
+	   #$(SRCDIR)ft_getpiece.c \
+	   #$(SRCDIR)ft_fight.c \
+	   #$(SRCDIR)ft_free.c \
+	   #$(SRCDIR)ft_updatemap.c
 
 OBJS = $(SRCS:.c=.o)
 

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 17:57:49 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 01:25:56 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 01:53:48 by flxw             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ typedef struct			s_data
 }						t_data;
 
 void					ft_init(t_data *data);
+void					ft_whoami(t_data *data);
 
 #endif
