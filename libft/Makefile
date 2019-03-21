@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:06:41 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/20 05:22:16 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/20 23:17:06 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -92,6 +92,7 @@ SRCS = $(SRCDIR)ft_atoi.c \
 	   $(SRCDIR)ft_strtrim.c \
 	   $(SRCDIR)ft_tolower.c \
 	   $(SRCDIR)ft_toupper.c \
+	   $(SRCDIR)ft_inttabmax.c \
 	   $(SRCDIR)get_next_line.c
 
 OBJS = $(SRCS:.c=.o)

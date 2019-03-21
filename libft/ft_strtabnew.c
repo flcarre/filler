@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/12 15:50:00 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 03:42:31 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 08:51:42 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,12 +20,12 @@ char	**ft_strtabnew(unsigned long y, unsigned long x)
 
 	if (!(tmp = (char **)malloc(sizeof(char *) * (y + 1))))
 		return ((void *)0);
-	*(tmp + y) = (void *)0;
-	i = y;
-	while (i--)
-		*(tmp + i) = (void *)0;
-	while (x && y--)
-		if (!(*(tmp + y) = ft_strnew(x)))
+	i = 0;
+	while (i <= y)
+		*(tmp + (i++)) = (void *)0;
+	i = 0;
+	while (x && i < y)
+		if (!(*(tmp + (i++)) = ft_strnew(x)))
 			return (ft_strtabdel(&tmp));
 	return (tmp);
 }

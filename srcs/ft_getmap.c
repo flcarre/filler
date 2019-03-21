@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 03:46:22 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 04:13:45 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 08:35:53 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ int			ft_getmap(t_tab *m)
 	get_next_line(0, &s);
 	m->y = ft_atoui(ft_strchr(s, ' '));
 	m->x = ft_atoui(ft_strchr(ft_strchr(s, ' ') + 1, ' '));
+	ft_memdel((void **)&s);
 	if (!(m->p = ft_strtabnew(m->y, m->x)))
 		return (1);
-	ft_memdel((void **)&s);
 	get_next_line(0, &s);
 	while (m->p[i])
 	{

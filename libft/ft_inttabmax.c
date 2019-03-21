@@ -1,36 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.c                                             :+:      :+:    :+:   */
+/*   ft_inttabmax.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/11 18:27:56 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 08:33:56 by lutsiara         ###   ########.fr       */
+/*   Created: 2019/03/20 23:07:22 by lutsiara          #+#    #+#             */
+/*   Updated: 2019/03/20 23:15:35 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "filler.h"
-
-int		main(void)
+int		ft_inttabmax(int ***tab, unsigned int x, unsigned int y)
 {
-	t_data	data;
-	int		end;
+	unsigned int	i;
+	unsigned int	j;
+	int				max;
 
-	end = 0;
-	ft_init(&data);
-	ft_whoami(&data);
-	if (ft_getmap(&data.m) || ft_alloccalc(&data))
-		return (1);
-	while (!end)
+	i = 0;
+	max = 0;
+	while (i < y)
 	{
-		if (ft_getpiece(&data.p))
-			return (1);
-		end = ft_fight(&data);
-		if (end)
-			ft_free(&data);
-		else
-			ft_updatemap(&data.m);
+		j = 0;
+		while (j < x)
+		{
+			if ((*tab)[i][j] > max)
+				max = (*tab)[i][j];
+			j++;
+		}
+		i++;
 	}
-	return (0);
+	return (max);
 }

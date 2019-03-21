@@ -1,36 +1,44 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_getpiece.c                                      :+:      :+:    :+:   */
+/*   ft_calcmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/20 03:47:11 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 08:59:58 by lutsiara         ###   ########.fr       */
+/*   Created: 2019/03/20 17:03:58 by lutsiara          #+#    #+#             */
+/*   Updated: 2019/03/21 00:11:58 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int	ft_getpiece(t_tab *p)
+static int	ft_calcangles(t_data *data)
 {
-	char			*s;
 	unsigned int	i;
+	unsigned int	j;
 
-	s = (void *)0;
 	i = 0;
-	get_next_line(0, &s);
-	p->y = ft_atoui(ft_strchr(s, ' '));
-	p->x = ft_atoui(ft_strchr(ft_strchr(s, ' ') + 1, ' '));
-	ft_memdel((void **)&s);
-	if (!(p->p = ft_strtabnew(p->y, p->x)))
-		return (1);
-	while (p->p[i])
+	while (data->m.p[i])
 	{
-		get_next_line(0, &s);
-		ft_strcpy(p->p[i], s);
-		ft_memdel((void **)&s);
+		j = 0;
+		while (data->m.p[i][j]])
+			ft_set(data, i, j++);
 		i++;
 	}
-	return (0);
+	return (ft_inttabmax(&data->i.p, data->i.x, data->i.y));
+}
+
+int			ft_calcmap(t_data *data)
+{
+	unsigned int	i;
+	int				r;
+
+	r = ft_calcangles(data);
+	i = 0;
+	while (data->m.p[i])
+		ft_translatex(data, i++);
+	i = 0;
+	while (data->m.p[0][i])
+		ft_translatey(data, i++);
+	return (r);
 }

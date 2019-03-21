@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/07 12:44:47 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 05:23:07 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 23:16:20 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -99,5 +99,6 @@ void				ft_delcontent(void *content, unsigned long content_size);
 void				ft_lstenqueue(t_list **list, t_list *elem);
 t_list				*ft_lstdupone(t_list *elem);
 t_list				*ft_lstdup(t_list *list);
+int					ft_inttabmax(int ***tab, unsigned int x, unsigned int y);
 
 #endif

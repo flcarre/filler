@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 17:57:49 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 05:07:32 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/20 22:46:13 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,6 +47,7 @@ int						ft_getmap(t_tab *m);
 int						ft_alloccalc(t_data *data);
 int						ft_getpiece(t_tab *p);
 int						ft_fight(t_data *data);
+int						ft_calcmap(t_data *data);
 void					ft_updatemap(t_tab *m);
 void					ft_free(t_data *data);
 
