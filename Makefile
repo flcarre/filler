@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/11 17:54:03 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/20 19:43:50 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/22 06:13:00 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -30,6 +30,7 @@ SRCS = $(SRCDIR)main.c \
 	   $(SRCDIR)ft_getpiece.c \
 	   $(SRCDIR)ft_fight.c \
 	   $(SRCDIR)ft_calcmap.c \
+	   $(SRCDIR)ft_resetmap.c \
 	   $(SRCDIR)ft_free.c \
 	   $(SRCDIR)ft_updatemap.c
 

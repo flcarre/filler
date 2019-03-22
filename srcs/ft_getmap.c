@@ -6,20 +6,26 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 03:46:22 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/20 08:35:53 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/22 05:59:13 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-static int	ft_check_map(t_tab *m, unsigned int j)
+static int	ft_check_map(t_tab *m, char *s)
 {
 	unsigned long	i;
 
 	i = 0;
-	while (m->p[j][i])
+	s = ft_strchr(s, ' ') + 1;
+	if ((unsigned long)m->x != ft_strlen(s))
 	{
-		if (m->p[j][i] != '.' && m->p[j][i] != 'O' && m->p[j][i] != 'X')
+		ft_strtabdel(&m->p);
+		return (1);
+	}
+	while (s[i])
+	{
+		if (s[i] != '.' && s[i] != 'O' && s[i] != 'X')
 		{
 			ft_strtabdel(&m->p);
 			return (1);
@@ -47,12 +53,12 @@ int			ft_getmap(t_tab *m)
 	{
 		ft_memdel((void **)&s);
 		get_next_line(0, &s);
-		ft_strcpy(m->p[i], ft_strchr(s, ' ') + 1);
-		if (ft_check_map(m, i++))
+		if (ft_check_map(m, s))
 		{
 			ft_memdel((void **)&s);
 			return (1);
 		}
+		ft_strcpy(m->p[i++], ft_strchr(s, ' ') + 1);
 	}
 	ft_memdel((void **)&s);
 	return (0);
