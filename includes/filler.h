@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   filler.h                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
+/*   By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 17:57:49 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/22 06:14:56 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/03/25 16:43:50 by flxw             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,6 +22,15 @@ typedef struct			s_tab
 	unsigned int		x;
 	unsigned int		y;
 }						t_tab;
+
+typedef struct			s_pos
+{
+	int					d;
+	unsigned int		x;
+	unsigned int		y;
+	unsigned int		i;
+	unsigned int		j;
+}						t_pos;
 
 typedef struct			s_tac
 {
@@ -48,6 +57,7 @@ int						ft_alloccalc(t_data *data);
 int						ft_getpiece(t_tab *p);
 int						ft_fight(t_data *data);
 int						ft_calcmap(t_data *data);
+int						ft_tracking(t_data *data);
 void					ft_updatemap(t_tab *m);
 void					ft_free(t_data *data);
 void					ft_resetmap(t_tac *i);

@@ -1,0 +1,1 @@
+int		ft_isok(t_data *data, )
