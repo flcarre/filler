@@ -1,32 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_fight.c                                         :+:      :+:    :+:   */
+/*   ft_dist.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2019/03/20 04:16:03 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/25 21:21:56 by lutsiara         ###   ########.fr       */
+/*   Created: 2019/03/25 20:14:21 by lutsiara          #+#    #+#             */
+/*   Updated: 2019/03/25 21:13:12 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "filler.h"
 
-int		ft_fight(t_data *data)
+int		ft_dist(t_data *data, t_pos *p)
 {
-	ft_calcmap(data);
-	if (ft_tracking(data))
+	int		distmin;
+	t_pos	t;
+
+	distmin = -1;
+	t.i = 0;
+	while (t.i < data->p.y)
 	{
-		ft_putunbr(data->px);
-		ft_putchar(' ');
-		ft_putunbr(data->py);
-		ft_putchar('\n');
-		return (1);
+		t.j = 0;
+		while (t.j < data->p.x)
+		{
+			if (data->p.p[t.i][t.j] == '*' && \
+			data->m.p[p->i + t.i][p->j + t.j] != data->me)
+			{
+				if (distmin == -1 || \
+				distmin > data->i.p[p->i + t.i][p->j + t.j])
+					distmin = data->i.p[p->i + t.i][p->j + t.j];
+			}
+			t.j++;
+		}
+		t.i++;
 	}
-	ft_putunbr(data->px);
-	ft_putchar(' ');
-	ft_putunbr(data->py);
-	ft_putchar('\n');
-	ft_resetmap(&data->i);
-	return (0);
+	return (distmin);
 }
