@@ -5,8 +5,8 @@ from tkinter import *
 
 file = open("vlogs.txt", "w")
 debug = True
-box_w = 30
-box_h = 30
+box_w = 10
+box_h = 10
 
 def log(s):
 	if debug:
@@ -84,9 +84,9 @@ class Game:
 		self.finished = False
 		self.init_root()
 		self.matrix = [[0 for x in range(self.plateau.size_x)] for y in range(self.plateau.size_y)]
-		self.label1 = Label(self.root, text=self.player1.generate_label_text(), foreground='purple')
-		self.label2 = Label(self.root, text=self.player2.generate_label_text(), foreground='blue')
-		self.canvas = Canvas(self.root, width=self.plateau.size_x * box_w + 3, height=self.plateau.size_y * box_h + 3)
+		self.label1 = Label(self.root, text=self.player1.generate_label_text(), foreground='red', background='black')
+		self.label2 = Label(self.root, text=self.player2.generate_label_text(), foreground='cyan', background='black')
+		self.canvas = Canvas(self.root, width=self.plateau.size_x * box_w, height=self.plateau.size_y * box_h)
 		self.label1.pack()
 		self.label2.pack()
 		self.canvas.pack()
@@ -110,7 +110,7 @@ class Game:
 				x1 = x0 + box_w
 				y1 = y0 + box_h
 				fill = 'black'
-				self.matrix[i][j] = self.canvas.create_rectangle(x0, y0, x1, y1, fill='black', outline='black', width=1)
+				self.matrix[i][j] = self.canvas.create_rectangle(x0, y0, x1, y1, fill='', outline='', width=1)
 
 	def set_window_colors(self):
 		board = self.plateau.get_board()
@@ -120,10 +120,10 @@ class Game:
 				fill = 'black'
 				fill = {
 					0: 'black',
-					1: 'purple',
-					2: 'orange',
+					1: 'red',
+					2: 'pink',
 					3: 'blue',
-					4: 'yellow'
+					4: 'cyan'
 				}[el]
 				self.canvas.itemconfig(self.matrix[i][j], fill=fill)
 
