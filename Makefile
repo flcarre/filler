@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/11 17:54:03 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/25 21:16:38 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/26 01:30:57 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -46,7 +46,7 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(INCDIR)/filler.h
 	@$(CC) -o $@ -c $< -I $(INCDIR) $(FLAGS)
 
 clean:

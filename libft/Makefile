@@ -6,7 +6,7 @@
 #    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:06:41 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/20 23:17:06 by lutsiara         ###   ########.fr        #
+#    Updated: 2019/03/26 01:30:44 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -104,7 +104,7 @@ $(NAME): $(OBJS)
 
 all: $(NAME)
 
-%.o: %.c
+%.o: %.c $(INCDIR)libft.h $(INCDIR)get_next_line.h
 	@$(CC) -o $@ -c $< -I $(INCDIR) $(FLAGS)
 
 clean:
