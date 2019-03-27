@@ -84,8 +84,10 @@ class Game:
 		self.finished = False
 		self.init_root()
 		self.matrix = [[0 for x in range(self.plateau.size_x)] for y in range(self.plateau.size_y)]
-		self.label1 = Label(self.root, text=self.player1.generate_label_text(), foreground='red', background='black')
-		self.label2 = Label(self.root, text=self.player2.generate_label_text(), foreground='cyan', background='black')
+		self.label1 = Label(self.root, text=self.player1.generate_label_text(), foreground='red', background='black', font='Helvetica 18 bold')
+		self.label1.pack(padx=50, pady=10, side=LEFT)
+		self.label2 = Label(self.root, text=self.player2.generate_label_text(), foreground='cyan', background='black', font='Helvetica 18 bold')
+		self.label2.pack(padx=50, pady=10, side=RIGHT)
 		self.canvas = Canvas(self.root, width=self.plateau.size_x * box_w, height=self.plateau.size_y * box_h)
 		self.label1.pack()
 		self.label2.pack()
