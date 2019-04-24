@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 13:24:09 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/13 16:21:41 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/04/24 15:48:16 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,7 +72,7 @@ static int		ft_cpy_n_cut(char **line, t_list **buff)
 		return (-1);
 	i += (*(s + i) == '\n') ? 1 : 0;
 	(*buff)->content = (void *)ft_strdup(s + i);
-	free(s);
+	ft_memdel((void **)&s);
 	s = (char *)(*buff)->content;
 	if (!s)
 		return (-1);
@@ -96,16 +96,14 @@ static int		ft_fddel(t_list **fd_buff, t_list **p)
 		i = f->next;
 		ft_lstdel(p, &ft_delcontent);
 		(*fd_buff)->content_size = 0;
-		ft_lstdelone(fd_buff, &ft_delcontent);
+		ft_memdel((void **)&(*fd_buff));
 		*fd_buff = i;
+		return (0);
 	}
-	else
-	{
-		ft_lstdel(p, &ft_delcontent);
-		f->content_size = 0;
-		i->next = f->next;
-		ft_lstdelone(&f, &ft_delcontent);
-	}
+	ft_lstdel(p, &ft_delcontent);
+	f->content_size = 0;
+	i->next = f->next;
+	ft_memdel((void **)&f);
 	return (0);
 }
 
@@ -125,7 +123,7 @@ int				get_next_line(const int fd, char **line)
 		b[r] = '\0';
 		s = (char *)(p->next->content);
 		p->next->content = (void *)ft_strjoin((char const *)s, (char const *)b);
-		free(s);
+		ft_memdel((void **)&s);
 		p->next->content_size = 0;
 		if (!(p->next->content))
 			return (-1);

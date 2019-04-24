@@ -6,7 +6,7 @@
 /*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/09 14:08:38 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/13 16:23:09 by lutsiara         ###   ########.fr       */
+/*   Updated: 2019/04/04 18:40:07 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@ char	*ft_strnstr(const char *haystack, const char *needle, unsigned long len)
 	unsigned long	i;
 	unsigned long	j;
 
-	if (!len)
+	if (!haystack || !len)
 		return ((void *)0);
 	if (!(*needle))
 		return ((char *)haystack);

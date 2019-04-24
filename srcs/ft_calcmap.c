@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calcmap.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: flxw <flxw@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 17:03:58 by lutsiara          #+#    #+#             */
-/*   Updated: 2019/03/25 19:31:55 by flxw             ###   ########.fr       */
+/*   Updated: 2019/03/26 01:35:32 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -112,26 +112,20 @@ static int	ft_disttoadv(t_data *data, unsigned int i, unsigned int j)
 	return (mindist);
 }
 
-int			ft_calcmap(t_data *data)
+void		ft_calcmap(t_data *data)
 {
 	unsigned int	i;
 	unsigned int	j;
-	int				maxdist;
-	int				tmp;
 
 	i = 0;
-	maxdist = 0;
 	while (data->m.p[i])
 	{
 		j = 0;
 		while (data->m.p[i][j])
 		{
-			tmp = ft_disttoadv(data, i, j);
-			maxdist = (tmp > maxdist) ? tmp : maxdist;
-			data->i.p[i][j] = tmp;
+			data->i.p[i][j] = ft_disttoadv(data, i, j);
 			j++;
 		}
 		i++;
 	}
-	return (maxdist);
 }
