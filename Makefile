@@ -3,14 +3,14 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lutsiara <lutsiara@student.42.fr>          +#+  +:+       +#+         #
+#    By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/03/11 17:54:03 by lutsiara          #+#    #+#              #
-#    Updated: 2019/03/26 01:30:57 by lutsiara         ###   ########.fr        #
+#    Created: 2019/03/11 17:54:03 by flcarre           #+#    #+#              #
+#    Updated: 2019/04/29 18:48:04 by flcarre          ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = lutsiara.filler
+NAME = flcarre.filler
 
 CC = gcc
 
