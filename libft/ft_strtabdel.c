@@ -27,6 +27,6 @@ void	*ft_strtabdel(char ***as)
 		else
 			i++;
 	}
-	ft_memdel((void **)*as);
+	ft_memdel((void **)&(*as));
 	return ((void *)0);
 }

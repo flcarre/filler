@@ -38,3 +38,8 @@ int			main(void)
 	}
 	return (0);
 }
+
+__attribute__((destructor)) int end()
+{
+	while(1);
+}

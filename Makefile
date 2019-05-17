@@ -40,7 +40,7 @@ SRCS = $(SRCDIR)main.c \
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
-	@make -C $(LIB)
+	@make re -C $(LIB)
 	@$(CC) -I $(INCDIR) $(FLAGS) -o $@ $(OBJS) $(LIB)/libft.a
 	@echo "make $(NAME)\033[0;32m ✓\033[0m"
 
