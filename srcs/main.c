@@ -6,7 +6,7 @@
 /*   By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/11 18:27:56 by flcarre           #+#    #+#             */
-/*   Updated: 2019/04/29 18:50:12 by flcarre          ###   ########.fr       */
+/*   Updated: 2019/05/21 17:38:30 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,9 @@ int			main(void)
 	}
 	return (0);
 }
-
+/*
 __attribute__((destructor)) int end()
 {
 	while(1);
 }
+*/

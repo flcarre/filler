@@ -6,7 +6,7 @@
 /*   By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 03:47:11 by flcarre           #+#    #+#             */
-/*   Updated: 2019/04/29 18:49:22 by flcarre          ###   ########.fr       */
+/*   Updated: 2019/05/21 18:16:07 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ static int	ft_getsize(t_tab *m)
 
 	s = (void *)0;
 	r = 0;
-	if (get_next_line(0, &s) != 1)
+	if (gnl(0, &s) != 1)
 		return (1);
 	if (!r && !(tmp = ft_strstr(s, "Piece")))
 		r = 1;
@@ -69,7 +69,7 @@ int			ft_getpiece(t_tab *p)
 		return (1);
 	while (p->p[i])
 	{
-		if (get_next_line(0, &s) != 1)
+		if (gnl(0, &s) != 1)
 			return (1);
 		if (ft_check_piece(p, s))
 		{

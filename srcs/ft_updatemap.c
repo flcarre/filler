@@ -6,7 +6,7 @@
 /*   By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 03:47:18 by flcarre           #+#    #+#             */
-/*   Updated: 2019/04/29 18:50:01 by flcarre          ###   ########.fr       */
+/*   Updated: 2019/05/21 18:16:00 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ static int	ft_verif_mapinfo(t_tab *m)
 
 	s = (void *)0;
 	r = 0;
-	if (get_next_line(0, &s) != 1)
+	if (gnl(0, &s) != 1)
 		return (1);
 	if (!r && !(tmp = ft_strstr(s, "Plateau")))
 		r = 1;
@@ -96,12 +96,12 @@ int			ft_updatemap(t_tab *m)
 	i = 0;
 	if (ft_verif_mapinfo(m))
 		return (1);
-	if (get_next_line(0, &s) != 1 || ft_line_check(m, &s))
+	if (gnl(0, &s) != 1 || ft_line_check(m, &s))
 		return (1);
 	while (m->p[i])
 	{
 		ft_memdel((void **)&s);
-		if (get_next_line(0, &s) != 1)
+		if (gnl(0, &s) != 1)
 			return (1);
 		if (ft_check_map(m, s))
 		{

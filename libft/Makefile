@@ -6,7 +6,7 @@
 #    By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/11/06 17:06:41 by flcarre           #+#    #+#              #
-#    Updated: 2019/04/29 18:56:42 by flcarre          ###   ########.fr        #
+#    Updated: 2019/05/21 17:00:08 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,6 +93,7 @@ SRCS = $(SRCDIR)ft_atoi.c \
 	   $(SRCDIR)ft_tolower.c \
 	   $(SRCDIR)ft_toupper.c \
 	   $(SRCDIR)ft_inttabmax.c \
+	   $(SRCDIR)gnl.c \
 	   $(SRCDIR)get_next_line.c
 
 OBJS = $(SRCS:.c=.o)

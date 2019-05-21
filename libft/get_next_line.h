@@ -6,7 +6,7 @@
 /*   By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/11/16 13:13:04 by flcarre           #+#    #+#             */
-/*   Updated: 2019/04/29 18:56:34 by flcarre          ###   ########.fr       */
+/*   Updated: 2019/05/21 17:30:51 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,5 +21,6 @@
 # define BUFF_SIZE 1
 
 int		get_next_line(const int fd, char **line);
+int		gnl(const int fd, char **line);
 
 #endif

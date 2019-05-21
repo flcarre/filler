@@ -6,7 +6,7 @@
 #    By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/03/11 17:54:03 by flcarre           #+#    #+#              #
-#    Updated: 2019/04/29 18:48:04 by flcarre          ###   ########.fr        #
+#    Updated: 2019/05/21 17:41:26 by lutsiara         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -40,7 +40,7 @@ SRCS = $(SRCDIR)main.c \
 OBJS = $(SRCS:.c=.o)
 
 $(NAME): $(OBJS)
-	@make re -C $(LIB)
+	@make -C $(LIB)
 	@$(CC) -I $(INCDIR) $(FLAGS) -o $@ $(OBJS) $(LIB)/libft.a
 	@echo "make $(NAME)\033[0;32m ✓\033[0m"
 

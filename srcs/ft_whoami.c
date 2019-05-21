@@ -6,7 +6,7 @@
 /*   By: flcarre <flcarre@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/03/20 03:47:28 by flcarre           #+#    #+#             */
-/*   Updated: 2019/04/29 18:50:07 by flcarre          ###   ########.fr       */
+/*   Updated: 2019/05/21 18:15:51 by lutsiara         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int			ft_whoami(t_data *data)
 	char	*s;
 
 	s = (void *)0;
-	if (get_next_line(0, &s) != 1)
+	if (gnl(0, &s) != 1)
 		return (1);
 	if (ft_verif_syntax(&s))
 		return (1);
